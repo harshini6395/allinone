@@ -1,6 +1,6 @@
 # Define locals
 locals {
   org_name = "ts"  
-  resource_group_name = "${local.org_name}-rg-${var.location}-${var.app_name}-${var.environment}-${format("%02d", var.index)}"
-  storage_account_name = "${local.org_name}-st-${var.app_name}${var.environment}${format("%02d", var.index)}"
+  rg_name = "${var.org_name}-${var.org_prefix}-${var.project_name}-${var.project_num}"
+  st_name = "${var.org_name}${var.st_prefix}${var.project_name}${var.project_num}"
 }
